@@ -1,0 +1,10 @@
+use Cwd;
+
+my $dir = getcwd;
+
+opendir(DIR, $dir);
+
+while (my $file = readdir($dir)) {
+    next if unless $file =~ /\.png$/;
+    `convert $file -flop $file`;
+}

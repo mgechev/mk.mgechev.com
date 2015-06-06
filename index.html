@@ -1,1 +1,113 @@
-<h1>Under maintenance</h1>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>mk.js</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Minko Gechev" />
+    <script src="src/mk.js"></script>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="shortcut icon" href="images/favicon.png" />
+</head>
+<body>
+    <div id="parent">
+        <div id="utils">
+            <div id="player1Name" class="playerName">Sub-Zero</div>
+            <div id="player1LifeBar" class="lifebar"><div class="life" id="player1Life"></div></div> 
+            <div id="player2Name" class="playerName">Kano</div>
+            <div id="player2LifeBar" class="lifebar"><div class="life" id="player2Life"></div></div> 
+        </div>
+        <div id="gameEnd">
+            <span id="gameOverLabel">
+                <span>Game over</span>
+                <br />press space to play again
+            </span>
+        </div>
+        <div id="arena">
+        </div> 
+        <div id="loading">
+            <span class="loadingLabel">Loading...</span> 
+        </div>
+    </div>
+    <div class="manual">
+        <div>
+            <table>
+                <tr>
+                    <td>
+                        <a href="https://twitter.com/mgechev"
+                           class="twitter-follow-button"
+                           data-show-count="false"
+                           data-show-screen-name="false"
+                           data-dnt="false">Follow</a>
+                    </td>
+                    <td>
+                         <iframe src="http://ghbtns.com/github-btn.html?user=mgechev&repo=mk.js&type=watch" allowtransparency="true" frameborder="0" scrolling="0" width="62" height="20"></iframe>                   
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <h1>How to play</h1> 
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Player 1</strong></td>
+                    <td><strong>Player 2</strong></td>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li>G - left, J - right, H - down, Y up</li>
+                            <li>Press "A" for high-punch</li>
+                            <li>Press "S" for low-punch</li>
+                            <li>Press "D" for low-kick</li>
+                            <li>Press "F" for high-kick</li>
+                            <li>Press "Shift" for block</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Use arrows to move</li>
+                            <li>Press "P" for high-punch</li>
+                            <li>Press "[" for low-punch</li>
+                            <li>Press "]" for low-kick</li>
+                            <li>Press "\" for high-kick</li>
+                            <li>Press "Ctrl" for block</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center">
+                        Press "Space" for restart
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center">
+                        <a href="http://github.com/mgechev/mk.js" target="_blank">
+                            For multi-player over the network read this
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <a href="http://github.com/mgechev/mk.js" target="_blank">
+        <div class="github"></div>
+    </a>
+    <script src="src/game.js"></script>
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-18060688-11']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+    <script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+    </script>
+</body>
+</html>
