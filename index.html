@@ -4,7 +4,6 @@
     <title>mk.js</title>
     <meta charset="utf-8">
     <meta name="author" content="Minko Gechev" />
-    <script src="src/mk.js"></script>
     <link rel="stylesheet" href="styles/styles.css" />
     <link rel="shortcut icon" href="images/favicon.png" />
 </head>
@@ -12,20 +11,20 @@
     <div id="parent">
         <div id="utils">
             <div id="player1Name" class="playerName">Sub-Zero</div>
-            <div id="player1LifeBar" class="lifebar"><div class="life" id="player1Life"></div></div> 
+            <div id="player1LifeBar" class="lifebar"><div class="life" id="player1Life"></div></div>
             <div id="player2Name" class="playerName">Kano</div>
-            <div id="player2LifeBar" class="lifebar"><div class="life" id="player2Life"></div></div> 
+            <div id="player2LifeBar" class="lifebar"><div class="life" id="player2Life"></div></div>
         </div>
         <div id="gameEnd">
             <span id="gameOverLabel">
                 <span>Game over</span>
-                <br />press space to play again
+                <br>press space to play again
             </span>
         </div>
         <div id="arena">
-        </div> 
+        </div>
         <div id="loading">
-            <span class="loadingLabel">Loading...</span> 
+            <span class="loadingLabel">Loading...</span>
         </div>
     </div>
     <div class="manual">
@@ -40,12 +39,12 @@
                            data-dnt="false">Follow</a>
                     </td>
                     <td>
-                         <iframe src="http://ghbtns.com/github-btn.html?user=mgechev&repo=mk.js&type=watch" allowtransparency="true" frameborder="0" scrolling="0" width="62" height="20"></iframe>                   
+                         <iframe src="http://ghbtns.com/github-btn.html?user=mgechev&repo=mk.js&type=watch" allowtransparency="true" frameborder="0" scrolling="0" width="62" height="20"></iframe>
                     </td>
                 </tr>
                 <tr>
                     <td colspan="2">
-                        <h1>How to play</h1> 
+                        <h1>How to play</h1>
                     </td>
                 </tr>
                 <tr>
@@ -92,7 +91,20 @@
     <a href="http://github.com/mgechev/mk.js" target="_blank">
         <div class="github"></div>
     </a>
-    <script src="src/game.js"></script>
+    <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/sw.js').then(function(registration) {
+          // Registration was successful
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }, function(err) {
+          // registration failed :(
+          console.log('ServiceWorker registration failed: ', err);
+        });
+      });
+    }
+    </script>
+    <script src="src/mk.js" async></script>
     <script type="text/javascript">
 
       var _gaq = _gaq || [];
